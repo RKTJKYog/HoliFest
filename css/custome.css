@@ -1,0 +1,70 @@
+
+.custome_checkbox {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.custome_checkbox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.custome_checkbox label {
+  position: relative;
+  cursor: pointer;
+}
+
+.custome_checkbox label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.custome_checkbox input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    right:10px;
+    opacity: 0.5;
+}
+.alert{
+    position: relative;
+}
+.alert.alert-success .fa,.alert.alert-danger .fa{
+ font-size: 1.6rem;
+}
+.form-control.error{border-color:red;}
+#disqus_thread iframe[sandbox|="allow"] {display:none;}
+

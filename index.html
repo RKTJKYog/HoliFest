@@ -17,6 +17,10 @@
     <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
     <meta name="msapplication-TileColor" content="#766df4">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/custome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <!-- Page loading styles-->
     <style>
       .page-loading {
@@ -178,15 +182,167 @@
         window.attachEvent("onmessage", handleIFrameMessage);
       }
     </script>
+    
     <!-- Vendor Styles-->
     <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
     <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css"/>
     <link rel="stylesheet" media="screen" href="vendor/flatpickr/dist/flatpickr.min.css"/>
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W9ZB7ZX');</script>
+	<!-- End Google Tag Manager -->
+
+
+  <script src="https://form.jotform.com/static/feedback2.js"></script>
+  <script>
+    new JotformFeedback({
+      
+  type: false,
+  width: 800,
+  height: 1500,
+  fontColor: "#FFFFFF",
+  background: "#F59202",
+  isCardForm: false,
+  formId: "220166612140139"
+  ,
+      buttonText: "Grab Your Tickets",
+      buttonSide: "left",
+      buttonAlign: "center",
+      base: "https://form.jotform.com/",
+    });
+  </script>
+  <script type="text/javascript">
+    var ifr = document.getElementById("lightbox-220166612140139");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("lightbox-" + args[(args.length - 1)]); } else { iframe = document.getElementById("lightbox"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Dallas Holi Fest 2023",
+    "startDate": "2023-03-11",
+    "endDate": "2023-03-11",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": [
+    {
+      "@type": "Place",
+      "name": "Radha Krishna Temple of Dallas",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1450 N.Watters Rd",
+        "addressLocality": "Allen",
+        "postalCode": "75013",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    }],
+    "image": [
+          "https://www.radhakrishnatemple.net/sites/default/files/Events/Holi/HoliBanner.png", "https://youtu.be/ABbn_xt6tFg"
+     ],
+    "description": "Dallas Holifest is the largest color play event in North DFW area. Held Annuly ini March the events feature music, dance, food, and color powder.",
+
+    "organizer": {
+      "@type": "Organization",
+      "name": "Radha Krishna Temple of Dallas",
+      "url": "https://www.radhakrishnatemple.net/holi"
+    }
+  }
+  </script>
+  
   </head>
   <!-- Body-->
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9ZB7ZX"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
   <!-- Page loading spinner-->
   <div class="page-loading active">
     <div class="page-loading-inner">
@@ -195,32 +351,40 @@
   </div>
   <main class="page-wrapper">
       
-      <!-- Navbar (Floating light)-->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
-
-      <header class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-floating navbar-sticky" style="opacity: 80%;" data-scroll-header data-fixed-element>
-        <div class="container px-0 px-xl-3">
-          <button class="navbar-toggler ms-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="https://www.radhakrishnatemple.net/">
-            <img class="navbar-stuck-logo " src="img/logo/RKT_Logo_2.png" alt="Around" width="83"><img class="d-lg-none" src="img/logo/RKT_Logo_2.png" alt="Radha Krishna Temple of Dallas" width="58"></a>
-            <div  class="pt-3">
-              <!-- Nav pills: Fill -->
-              <ul class="nav nav-pills justify-content-center">
-                <li class="nav-item">
-                  <a href="#Features" class="nav-link ">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Tickets" class="nav-link">Buy Ticket</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Vendor" class="nav-link">Be A Vendor</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#Souvenier" class="nav-link " tabindex="-1" >Souvenier</a>
-                </li>
-              </ul>
-              </div>
-          </div>
-      </header>
+      
+  <!-- Offcanvas mobile menu example -->
+  <header class="header navbar navbar-expand-lg navbar-dark navbar-shadow navbar-sticky"  style="background-color:rgb(4, 30, 103); opacity: 80%;" data-scroll-header data-fixed-element>
+    <div class="container px-0 px-xl-3">
+    <a class="navbar-brand flex-shrink-0 pe-lg-2 me-lg-4" href="index.html">
+      <img src="img/webp/RKT_Logo_2.webp" width="83" alt="RadhaKrishnaTempleofDallas">
+    </a>
+    <button class="navbar-toggler me-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-collapse offcanvas-end" id="primaryMenu">
+      <div class="offcanvas-header navbar-shadow">
+        <h5 class="mt-1 mb-0">Menu</h5>
+        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav" style=" font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: x-large; ">
+          <li class="nav-item active"><a class="nav-link" href="#Features" style="color: #e7e7f1">Features</a></li>
+          <li class="nav-item active"><a class="nav-link" href="/holi/Tickets.html" style="color: #e7e7f1">Buy Tickets</a></li>
+          <li class="nav-item active"><a class="nav-link" href="/holi/Tickets.html#Vendor" style="color: #e7e7f1">Be A Vendor</a></li>
+          <li class="nav-item active"><a class="nav-link" href="/holi/Tickets.html#Souvenier" style="color: #e7e7f1">Souvenir Advt</a></li>
+          <li class="nav-item active"><a class="nav-link" href="#Sponsors" style="color: #e7e7f1">Sponsors</a></li>
+          <li class="nav-item active"><a class="nav-link" href="https://www.radhakrishnatemple.net/holi-volunteers" style="color: #e7e7f1">Volunteer</a></li>
+          <li class="nav-item active"><a class="nav-link" href="/holi/FAQs.html" style="color: #e7e7f1">FAQs</a></li>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "ae3a69aee0f21aff5ee1c62d10d9c2f7"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+<!-- End Constant Contact Active Forms -->
       <!-- Page content-->
 <!-- Controls position: Dots outside + Arrows inside -->
 <!--link href="cover.css" rel="stylesheet"-->
@@ -229,52 +393,61 @@
   <div class="cover-container d-flex  p-3 mx-auto flex-column">
     <header class="mb-auto">
       <div>
-        <img class="rounded" src="img/logo/Holi_Banner_2.jpeg" width="100%">
+        <img class="rounded" src="img/logo/HoliBanner_2023.png" width="100%">
       </div>
     </header>
+    
   </div>
 
 <!-- Venue  -->
-<section>
-  <div class="card text-center border-0 shadow">
-    <div class="card-body">
-      <div class="countdown h1 justify-content-center "  data-countdown="03/19/2022 011:00:00 AM">
-        <div class="countdown-days text-success">
-          <span class="countdown-value"></span>
-          <span class="countdown-label ">Days</span>
+  <section>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="card text-center border-0 shadow">
+          <div class="card-body">
+            <div class="countdown h1 justify-content-center "  data-countdown="03/11/2023 011:00:00 AM">
+              <div class="countdown-days text-success">
+                <span class="countdown-value"></span>
+                <span class="countdown-label ">Days</span>
+              </div>
+              <div class="countdown-hours text-danger">
+                <span class="countdown-value"></span>
+                <span class="countdown-label ">Hours</span>
+              </div>
+              <div class="countdown-minutes text-dark">
+                <span class="countdown-value"></span>
+                <span class="countdown-label ">Mins</span>
+              </div>
+              <div class="countdown-seconds text-warning">
+                <span class="countdown-value"></span>
+                <span class="countdown-label ">Secs</span>
+              </div>
+            </div>  
+              <h3 class="text-primary" style="font-family: Alegreya-Bold;">Venue: SE corner of TX-121 & Gillespie Dr Plano, TX</h3>
+              <h5 class="card-text text-dark" style="font-family: Alegreya-Bold;">About 6mi from  Radha Krishna Temple, Allen, TX 75013  </h5>  
+            <i class="ai-map-pin h2 mt-2 mb-4 text-primary"></i> 
+            <p><a href="https://goo.gl/maps/5YyqebEaF8oZjoq36" class="btn btn-sm btn-primary">Direction</a></p>
+          </div>
         </div>
-        <div class="countdown-hours text-danger">
-          <span class="countdown-value"></span>
-          <span class="countdown-label ">Hours</span>
-        </div>
-        <div class="countdown-minutes text-dark">
-          <span class="countdown-value"></span>
-          <span class="countdown-label ">Mins</span>
-        </div>
-        <div class="countdown-seconds text-warning">
-          <span class="countdown-value"></span>
-          <span class="countdown-label ">Secs</span>
-        </div>
-      </div>  
-        <h3 class="text-primary" style="font-family: Alegreya-Bold;">Venue:Exchange Parkway & Watters rd. (NE Corner)</h3>
-        <h5 class="card-text text-dark" style="font-family: Alegreya-Bold;">Near Radha Krishna Temple, Allen, TX 75013 </h5>  
-      <i class="ai-map-pin h2 mt-2 mb-4 text-primary"></i> 
-      <p><a href="https://goo.gl/maps/pZ2TfjKTAg3y88BH7" class="btn btn-sm btn-primary">Direction</a></p>
+      </div>
+      <div class="col-sm-4"></div>
+
     </div>
-  </div>
-</section>
+
+  </section>
 
 <!-- Portfolio-->
   <!--div style="background-image:url('img/logo/Features_BG_4.svg'); background-size:contain;"-->
   <section class="jarallax bg-dark py-7" data-jarallax data-speed="0.25">
   <div class="jarallax-img" style="background-image: url(img/logo/rose-petals_1.svg);"></div>
-  <!--div style="background-color: rgb(90, 2, 2);"-->
-    <section class="container overflow-hidden pt-5"  >
+
+  <section class="container overflow-hidden "  >
     <div >
       <h1 class="text-align-center" style="color: rgb(250, 196, 48);font-size: 42px; font-family: Alegreya-Bold; line-height: 1.4;">Dallas Holi Fest</h1>
-      <p class="text-align-center h2" style="color: rgb(248, 241, 244); font-family: Alegreya-Medium; ">on Saturday March 19th, 2022 11am to 4pm. </p>
-    <p class="text-align-center h4" style="color: rgb(250, 249, 245); font-family: Alegreya-Medium; ">Join the Biggest Holi Celebration in DFW Metroplex. A FamilyFriendly event featuring most popular Bollywood artists : Harry Anand & Shalmali Kholgade performing LIVE. Plenty of exciting activities for all ages!
-    <a href="#Tickets"> Get your tickets now! </a> </p>
+      <p class="text-align-center h2" style="color: rgb(248, 241, 244); font-family: Alegreya-Medium; ">on Saturday March 11th, 2023 11am to 4pm. </p>
+    <p class="text-align-center h4" style="color: rgb(250, 249, 245); font-family: Alegreya-Medium; ">Join the Biggest Holi Celebration in DFW Metroplex. A FamilyFriendly event featuring most popular Bollywood artists: Harry Anand & Aditi Singh Sharma performing LIVE. Plenty of exciting activities for all ages!
+    <a href="/holi/Tickets.html" style="color: rgb(255, 238, 0);"> Get your tickets now! </a> </p>
     </div>
     
     <h2 id="Features" class="text-center pt-6 pt-md-0" style="color: rgb(247, 241, 246);font-size: 42px; font-family: Alegreya-Bold;" >Features</h2>
@@ -289,214 +462,305 @@
       </ul>
       <!-- Portfolio grid-->
       <div class="masonry-grid" data-columns="3">
-        <div class="masonry-grid-item" data-groups="[&quot;dance&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/Harry_3.png" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;dance&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/Harry_3.webp" alt="Portfolio thumb">
             <div class="card-body text-center" style="background-color:indigo">
               <h3 class="h5 nav-heading text-warning mb-2">LIVE Concert with </h3>
               <h4 class="mb-2 text-light"  > Remix King Harry Anand</h4>
             </div></a></div>
-      <div class="masonry-grid-item" data-groups="[&quot;dance&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/Flyer_5.png" alt="Portfolio thumb">
+      <div class="masonry-grid-item" data-groups="[&quot;dance&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/Dance.jpg" alt="Portfolio thumb">
         <div class="card-body text-center" style="background-color:indigo">
           <h3 class="h5 nav-heading text-warning  mb-2">Dance to the tunes of non-stop</h3>
           <h4 class="mb-2 text-light"> LIVE music</h4>
         </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;dance&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/Shalmali.png" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;dance&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/Aditi.jpg" alt="Portfolio thumb">
             <div class="card-body text-center" style="background-color:indigo">
-              <h3 class="h5 nav-heading text-warning  mb-2">Balam Pichakari Fame</h3>
-              <h4 class="mb-2 text-light">Shalmali Kholgade</h4>
+              <h3 class="h5 nav-heading text-warning  mb-2">Dhoom Machale Ddhoom Fame</h3>
+              <h4 class="mb-2 text-light">Aditi Singh Sharma</h4>
             </div></a></div>
 
-        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/ColorPlay.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/ColorPlay.webp" alt="Portfolio thumb">
             <div class="card-body  text-center" style="background-color: indigo;">
               <h3 class="h5 nav-heading text-warning mb-2">Color Play with Organic colors</h3>
             </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/FamilyFriendly.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/FamilyFriendly.webp" alt="Portfolio thumb">
             <div class="card-body text-center" style="background-color:indigo">
               <h3 class="h5 nav-heading text-warning mb-2">Family Friendly</h3>
             </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;carnival&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/KidsCorner.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;carnival&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/KidsCorner.webp" alt="Portfolio thumb">
             <div class="card-body text-center" style="background-color:indigo">
               <h3 class="h5 nav-heading text-warning mb-2">Kids Corner</h3>
             </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/Braj_1.png" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/Braj_1.webp" alt="Portfolio thumb">
           <div class="card-body text-center" style="background-color:indigo">
             <h3 class="h5 nav-heading text-warning mb-2">Braj Ke Rang, Radha Krishna ke Sang</h3>
           </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;food&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/food.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;food&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/food.webp" alt="Portfolio thumb">
             <div class="card-body text-center" style="background-color:indigo">
               <h3 class="h5 nav-heading text-warning mb-2">Mouthwatering Yummy Food!</h3>
             </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;carnival&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/Vendor.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;carnival&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/Vendor.webp" alt="Portfolio thumb">
           <div class="card-body text-center" style="background-color:indigo">
             <h3 class="h5 nav-heading text-warning mb-2">Vendor Booths!</h3>
           </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/ColorPlay_2.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/ColorPlay_2.webp" alt="Portfolio thumb">
           <div class="card-body text-center" style="background-color:indigo">
             <h3 class="h5 nav-heading text-warning mb-2">Fun with Colors!</h3>
           </div></a></div>
-        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/portfolio/ColorPlay_3.jpeg" alt="Portfolio thumb">
+        <div class="masonry-grid-item" data-groups="[&quot;color&quot;]"><a class="card card-hover border-0 shadow" ><img class="card-img-top" src="img/webp/ColorPlay_3.webp" alt="Portfolio thumb">
           <div class="card-body text-center" style="background-color:indigo">
             <h3 class="h5 nav-heading text-warning mb-2">Organic Colors available On-site!</h3>
           </div></a></div>
       </div>
     </div>
   </section>
-  </div>
-  </section>
-  <section class="jarallax bg-dark " data-jarallax data-speed="0.25">
-    <div class="jarallax-img" style="background-image: url(img/logo/Ticket_Bg.svg);"></div>  
-<!--div style="background-image:url('img/logo/Ticket_Bg.svg'); background-size:contain;" -->
-    <section class="container py-5 py-md-6 py-lg-7 my-3" >
-      <h2 class="mb-3 text-dark">Buy Tickets!!</h2>
-      <div class="row align-items-center">
-        <div class="col-lg-8 col-md-7 bg-position-center bg-repeat-0" style="background-image: url(img/demo/business-consulting/services/bg-shape.svg);">
-          <div class="mx-auto" style="max-width: 610px;">
-            <div class="row align-items-center">
-              <div class="col-sm-6">
-                <div class="shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start" style="background-color: rgb(13, 175, 67);"><img class="d-inline-block mb-4 mt-2" src="img/logo/services/01.svg" alt="Icon" width="100">
-                  <h3 class="h3 mb-2 text-light">Pre-Event meet & greet with Celebrities!</h3>
-                  <p class="fs-sm h4 text-light">Exclusive access to celebrities and dinner the night before Holi.</p>
+</div>
+</section>
+  <section class="jarallax bg-dark  position-relative pt-5 pt-lg-6 pb-5" data-jarallax data-speed="0.25" >
+    <div class="jarallax-img" style="background-image: url(img/logo/Holi-Hero_2.jpg);"></div>
+    <!-- Tabs-->
+    <div class="container rounded pt-lg-5" style="background-color: rgb(248, 233, 192); ">
+      <h1 style="color: rgb(17, 1, 1);">Get Your Tickets!</h1>
+      <div class="row align-items-center pb-7">
+        <div class="col-lg-3">
+
+            
+          <ul class="nav nav-tabs media-tabs media-tabs-dark justify-content-center justify-content-lg-start pb-3 mb-4 pb-lg-0 mb-lg-0" role="tablist">
+            
+            <li class="nav-item me-3 mb-3"><a class="nav-link" href="#generaladm" data-bs-toggle="tab" role="tab">
+              <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/logo/Icons/ticket-alt-solid.svg" alt="Product" width="60">
+                <div class="w-100 ps-2 ms-1">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-lg pe-1 text-dark">General Admission</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                  </div>
                 </div>
-                <div class=" shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start" style="background-color: rgb(233, 136, 10);"><img class="d-inline-block mb-4 mt-2" src="img/logo/services/02.svg" alt="Icon" width="100">
-                  <h3 class="mb-2 text-light ">Deluxe Admission</h3>
-                  <p class="fs-sm text-light"> Get close to the stage and access to a designated seated area for ultimate fun and convenience! No outside color or food allowed. Colors and food available for purchase. </p>
-                </div>
-                <div class=" shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start" style="background-color: rgb(129, 2, 61);"><img class="d-inline-block mb-4 mt-2" src="img/logo/services/03.svg" alt="Icon" width="100">
-                  <h3 class=" mb-2 text-light">General Admission</h3>
-                  <p class="fs-sm text-light">General admission for hours of fun-filled Holi Dhamaka! No outside color or food allowed. Colors and food available for purchase. Ticket good for ages 4 and above.</p>
+              </div></a></li>
+              
+          <li class="nav-item me-3 mb-3"><a class="nav-link" href="#delux" data-bs-toggle="tab" role="tab">
+            <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/logo/Icons/ticket-alt-solid.svg" alt="Product" width="60">
+              <div class="w-100 ps-2 ms-1">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="fs-lg pe-1 text-dark">Delux Admission</div><i class="ai-chevron-right lead ms-2 me-1"></i>
                 </div>
               </div>
-              <div class="col-sm-6" >
-                <div class="shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start" style="background-color: rgb(51, 6, 216);"><img class="d-inline-block mb-4 mt-2" src="img/logo/services/04.svg" alt="Icon" width="100">
-                  <h3 class="h3 mb-2 text-light">Premium Group Cabin</h3>
-                  <p class="fs-sm h4 text-light">Private table seating in a booth to gather with your family and friends. Meet & greet with celebrities in your booth. No outside color or food allowed. Colors and food provided. Max. 8 members in a booth. </p>
+            </div></a></li>
+
+          <li class="nav-item me-3 mb-3"><a class="nav-link active" href="#premium" data-bs-toggle="tab" role="tab">
+                <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/logo/Icons/ticket-alt-solid.svg" alt="Product" width="60">
+                  <div class="w-100 ps-2 ms-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="fs-lg pe-1 text-dark">Premium Admission</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                    </div>
+                  </div>
+                </div></a></li>
+
+             
+           
+          <li class="nav-item me-3 mb-3"><a class="nav-link" href="#meet" data-bs-toggle="tab" role="tab">
+              <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/logo/Icons/ticket-alt-solid.svg" alt="Product" width="60">
+                <div class="w-100 ps-2 ms-1">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-lg pe-1 text-dark">Meet & Greet Dinner with Celebrities!</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                  </div>
                 </div>
-                <div class=" shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start" style="background-color: rgb(240, 52, 199);" ><img class="d-inline-block mb-4 mt-2" src="img/logo/services/05.svg" alt="Icon" width="100">
-                  <h3 class=" mb-2 text-light">Organic Holi Colors!</h3>
-                  <p class="fs-sm text-light">Food and colors available at the event. No outside colors allowed.</p>
+              </div></a></li>
+
+          <li class="nav-item me-3 mb-3"><a class="nav-link" href="#holika" data-bs-toggle="tab" role="tab">
+            <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/logo/Icons/ticket-alt-solid.svg" alt="Product" width="60">
+              <div class="w-100 ps-2 ms-1">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="fs-lg pe-1 text-dark">Holika Dahan</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                </div>
+              </div>
+            </div></a></li>
+
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="premium">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                  <a class="btn btn-translucent-primary text-dark" href="/holi/Tickets.html#ticket"><em> Buy Now - $250 each $2000 for the table! </em></a>
+                  <div class="mx-auto" style="max-width: 443px;"><img src="img/Gallery/Premium.png" alt="Security Camera"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                  <div class="ps-xl-5">
+                    <h2 class="h1 text-dark">Premium Admission</h2>
+                    <p class="fs-lg text-dark mb-lg-5">Private table seating for one member in a booth to gather with your family and friends. Meet & greet with celebrities in your booth. No outside color or food allowed. Colors and food provided. Max. 8 members in a booth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="delux">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                  <a class="btn btn-translucent-primary text-dark" href="/holi/Tickets.html#ticket"><em> Buy Now - $50.00 each </em></a>
+                  <div class="mx-auto" style="max-width: 443px;"><img src="img/Gallery/Delux.png" alt="Running Sneakers"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                  <div class="ps-xl-5">
+                    <h2 class="h1 text-dark">Deluxe Admission</h2>
+                    <p class="fs-lg  text-dark mb-lg-5">Get close to the stage and access to a designated seated area for ultimate fun and convenience! No outside color or food allowed. Colors and food available for purchase. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="generaladm">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                  <a class="btn btn-translucent-primary text-dark" href="/holi/Tickets.html#ticket"> <em>Buy Now - $15.00 each</em></a>
+                  <div class="mx-auto" style="max-width: 443px;"><img src="img/Gallery/General.png" alt="VR Headset"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                  <div class="ps-xl-5">
+                    <h2 class="h1 text-dark">General Admission</h2>
+                    <p class="fs-lg  text-dark mb-lg-5">General admission for hours of fun-filled Holi Dhamaka! No outside color or food allowed. Colors and food available for purchase. Ticket good for ages 4 and above.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="meet">
+              <div class="row align-items-center">
+
+                <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                  <a class="btn btn-translucent-primary text-dark" href="/holi/Tickets.html#ticket"><em>Buy Now - $100.00 each </em></a>
+                  <div class="mx-auto" style="max-width: 443px;"><img src="img/Gallery/MeetGreet.png" alt="VR Headset"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                  
+                  <div class="ps-xl-5">
+                    <h2 class="h1 text-dark">Pre-Event Meet & Greet Dinner with Celebrities!</h2>
+                    <p class="fs-lg  text-dark mb-lg-5">Exclusive access to celebrities and dinner the night before Holi on March 18th 2022 at 6:30pm .</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="holika">
+              <div class="row align-items-center">
+
+                <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                  <a class="btn btn-translucent-primary text-dark" href="https://www.radhakrishnatemple.net/holika-dahan"><em>Free Registration</em></a>
+                  <div class="mx-auto" style="max-width: 443px;"><img src="img/Gallery/Holika.png" alt="Holika Dahan"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                  
+                  <div class="ps-xl-5">
+                    <h2 class="h1 text-dark">Satyanarayan Pooja & Holika Dahan</h2>
+                    <p class="fs-lg  text-dark mb-lg-5">Thursday, March 17th, 2022 from 5:00 PM - 8:30 PM CST </p>
+
+                    <p class="fs-lg  text-dark mb-lg-5">Venue: Radha Krishna Temple of Dallas, Allen Tx</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div id= "Tickets" class="col-lg-4 col-md-5 text-center text-md-start mb-5 mb-md-0">
-          <p class="text-muted mb-4 pb-2"> </p>
-  
-          <script type="text/javascript" src="https://form.jotform.com/jsform/220166612140139"></script>
-                    </div>
       </div>
-    </section>
-  </div>
+    </div>
   </section>
+  
+
     
   <section class="jarallax bg-dark " data-jarallax data-speed="0.25">
     <div class="jarallax-img" style="background-image: url(img/logo/Sponsors/5.svg);"></div>
-  <!--div style="background-image:url('img/logo/Sponsors/5.svg'); background-size:contain;"-->
-  <div class="px-3 py-3" style="background-color: rgb(88, 1, 55); opacity: 80%;">
-  <h2 class="text-light">Frequently Asked Questions</h2>
-  <!-- Basic accordion -->
-  <div class="accordion" id="accordionExample">
-  
-    <!-- Item -->
-    <div class="accordion-item ">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1. What is the Holi Festival?
-        </button>
-      </h2>
-      <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body">This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
-      </div>
-    </div>
-  
-    <!-- Item -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button>
-      </h2>
-      <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
-      </div>
-    </div>
-  
-    <!-- Item -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button>
-      </h2>
-      <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-        <div class="accordion-body">This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.</div>
-      </div>
-    </div>
-  </div>  
-</div>
-  </div>
-  
-  <div style="background-color: blanchedalmond;">
-    <section class="container py-5 py-md-6 py-lg-7">
-      <div class="row g-0 py-3 py-md-0 justify-content-center">
-
-        <div id= "Vendor" class="col-lg-4 col-md-5 text-center text-md-start mb-5 mb-md-0">
-          <h2 class="mb-3">Be A Vendor</h2>
-          <p class="text-dark mb-4">Grow your business by having a booth and reaching out to thousands of atteendee at the event!</p>
-          <p class="text-muted mb-4 pb-2"> </p>
-  
-          <script type="text/javascript" src="https://form.jotform.com/jsform/220210717283143"></script>
-        </div>
-
-        <div id= "Souvenir" class="col-lg-4 col-md-5 text-center text-md-start mb-5 mb-md-0">
-          <h2 class="mb-3">Dallas Holi Fest Souvenir </h2>
-          <p class="text-dark mb-4">Grow your business by having a booth and reaching out to thousands of atteendee at the event!</p>
-          <p class="text-muted mb-4 pb-2"> </p>
-
-          <script type="text/javascript" src="https://form.jotform.com/jsform/220176123848051"></script>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- Flush accordion. Use this when you need to render accordions edge-to-edge with their parent container -->
-<div class="accordion accordion-flush" id="accordionFlushExample">
+    
+    
 <!--Sponsors-->
-<div class= "px-3 py-3" style="background-color: rgb(88, 1, 55); opacity: 80%;">
-  <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
-    <h2 class="text-light text-center" style="font-family: Alegreya-Bold">Our Sponsors</h2>
-    <h4 class="text-light text-center">Thank You for your continued and much-appreciated support to Radha Krishna Temple of Dallas. </h4>
-    <h6 class="text-light text-center">Contact (972) 527-6195 for additional information about becoming a sponsor.</h6>
+    <div id= "Sponsors" class= "px-3 py-3" style="background-color: rgb(1, 26, 88); opacity: 80%;">
+      <section class="container mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
 
-    <div class="row justify-content-center pt-3">
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-          <div class="card-body px-1 py-0 text-center">
-            <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/7.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/6.png" alt="David Hicks Company" width="150"></div>
-          </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-          <div class="card-body px-1 py-0 text-center">
-            <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Dr. Dash.png" alt="Dr.Dash" width="150"><img class="swap-from" src="img/logo/Sponsors/Dr. Dash.png" alt="Dr.Dash" width="150"></div>
-          </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-          <div class="card-body px-1 py-0 text-center">
-            <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Priya Living.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/Priya Living.png" alt="Brand logo" width="150"></div>
-          </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-        <div class="card-body px-1 py-0 text-center">
-          <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/15.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/15.png" alt="Brand logo" width="150"></div>
-        </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-        <div class="card-body px-1 py-0 text-center">
-          <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/14.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/14.png" alt="Brand logo" width="150"></div>
-        </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-          <div class="card-body px-1 py-0 text-center">
-            <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/SR .png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/SR .png" alt="Brand logo" width="150"></div>
-          </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-          <div class="card-body px-1 py-0 text-center">
-            <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Radio Carvan (2).png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/Radio Carvan (2).png" alt="Radio Carvan" width="150"></div>
-          </div></a></div>
-      <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
-          <div class="card-body px-1 py-0 text-center">
-            <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Dupriest.png" alt="Dupriest" width="150"><img class="swap-from" src="img/logo/Sponsors/Dupriest.png" alt="Dupriest" width="150"></div>
-          </div></a></div>
-  </section>
-</div>
-<div style="background-color: rgb(82, 3, 36);">
+        <h2 class="text-light text-center" style="font-family: Alegreya-Bold">Our Sponsors</h2>
+        <h4 class="text-light text-center">Thank You for your continued and much-appreciated support to Radha Krishna Temple of Dallas. </h4>
+        <h6 class="text-light text-center">Contact (972) 527-6195 for additional information about becoming a sponsor.</h6>
+
+        <div class="row justify-content-center pt-3">
+          
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Priya Living.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/Priya Living.png" alt="Brand logo" width="150"></div>
+            </div></a>
+          </div>         
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Leela Kasa.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/Leela Kasa.png" alt="Leela Kasa" width="150"></div>
+            </div></a>
+          </div>  
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Radio Carvan (2).png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/Radio Carvan (2).png" alt="Radio Carvan" width="150"></div>
+            </div></a></div>
+
+         <!--div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Aarti Jewellers logo.png" alt="Aarti Jewellers" width="150"><img class="swap-from" src="img/logo/Sponsors/Aarti Jewellers logo.png" alt="Aarti Jewellers" width="150"></div>
+            </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/SR.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/SR.png" alt="Brand logo" width="150"></div>
+              </div></a></div>
+
+              
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/7.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/6.png" alt="David Hicks Company" width="150"></div>
+              </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                <div class="card-body px-1 py-0 text-center">
+                  <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Covizone.png" alt="Covizone" width="150"><img class="swap-from" src="img/logo/Sponsors/Covizone.png" alt="Covizone" width="150"></div>
+                </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                  <div class="card-body px-1 py-0 text-center">
+                    <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Showfest.png" alt="Showfest" width="150"><img class="swap-from" src="img/logo/Sponsors/Showfest.png" alt="Showfest" width="150"></div>
+                  </div></a></div>
+             
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                    <div class="card-body px-1 py-0 text-center">
+                      <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Sandeep Shrivastava.png" alt="Sandeep Shrivastava" width="150"><img class="swap-from" src="img/logo/Sponsors/Sandeep Shrivastava.png" alt="Sandeep Shrivastava" width="150"></div>
+                    </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/15.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/15.png" alt="Brand logo" width="150"></div>
+            </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter "><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/14.png" alt="Brand logo" width="150"><img class="swap-from" src="img/logo/Sponsors/14.png" alt="Brand logo" width="150"></div>
+            </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Dupriest.png" alt="Dupriest" width="150"><img class="swap-from" src="img/logo/Sponsors/Dupriest.png" alt="Dupriest" width="150"></div>
+              </div></a></div>
+                                
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/logo/Sponsors/Music Masti Magic.png" alt="Music Masti Magic" width="150"><img class="swap-from" src="img/logo/Sponsors/Music Masti Magic.png" alt="Music Masti Magic" width="150"></div>
+              </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                <div class="card-body px-1 py-0 text-center">
+                  <div class="swap-image"><img class="swap-to" src="img/logo/DP.png" alt="Music Masti Magic" width="150"><img class="swap-from" src="img/logo/DP.png" alt="Discount Power" width="150"></div>
+                </div></a></div>
+
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/logo/Shivam.png" alt="Music Masti Magic" width="150"><img class="swap-from" src="img/logo/Shivam.png" alt="Shivam" width="150"></div>
+              </div></a></div-->
+  
+
+
+
+ 
+      </section>
+    </div>
+    <div style="background-color: rgb(15, 3, 82);">
         <!-- Subscribe CTA-->
         <div id="disqus_comments_sec" class="container">
           <div id="disqus_thread"></div>
@@ -512,7 +776,7 @@
             */
             (function() { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
-            s.src = 'https://http-192-169-81-40-rkt.disqus.com/embed.js';
+            s.src = 'https://radhakrishnatemple.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
             })();
@@ -589,8 +853,8 @@
               </div>
             </div>
           </div>
-        </section>
-      </div>
+      </section>
+    </div>
   </main>
     <footer class="site-footer bg-dark pt-5 pb-4">
       <div class="container d-md-flex justify-content-between align-items-center text-center">
@@ -621,5 +885,7 @@
     <script src="js/theme.min.js"></script>
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/custom.js"></script>
   </body>
 </html>

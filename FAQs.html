@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dallas Holi Fest | Radha Krishna Temple, Allen TX</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Dallas Holi Festival">
+    <meta name="keywords" content="Holi celebrations, Holika Dahan, HoliFest, Phoolo Ke Holi, Holi with Flowers, Festival Of colors, Holi Milan, Holi Special Food, Holi events, Holi Puja, Holi with Radha Krishna, Dallas Holi ">
+    <meta name="author" content="Radha Krishna Temple of Dallas, 75013">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="RKT_Logo_2.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="RKT_Logo_32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="RKT_Logo_16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+
+      var ifr = document.getElementById("JotFormIFrame-220128373579157");
+      if (ifr) {
+        var src = ifr.src;
+        var iframeParams = [];
+        if (window.location.href && window.location.href.indexOf("?") > -1) {
+          iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+        }
+        if (src && src.indexOf("?") > -1) {
+          iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+          src = src.substr(0, src.indexOf("?"))
+        }
+        iframeParams.push("isIframeEmbed=1");
+        ifr.src = src + "?" + iframeParams.join('&');
+      }
+      window.handleIFrameMessage = function(e) {
+        if (typeof e.data === 'object') { return; }
+        var args = e.data.split(":");
+        if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+        if (!iframe) { return; }
+        switch (args[0]) {
+          case "scrollIntoView":
+            iframe.scrollIntoView();
+            break;
+          case "setHeight":
+            iframe.style.height = args[1] + "px";
+            break;
+          case "collapseErrorPage":
+            if (iframe.clientHeight > window.innerHeight) {
+              iframe.style.height = window.innerHeight + "px";
+            }
+            break;
+          case "reloadPage":
+            window.location.reload();
+            break;
+          case "loadScript":
+            if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+            var src = args[1];
+            if (args.length > 3) {
+                src = args[1] + ':' + args[2];
+            }
+            var script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            document.body.appendChild(script);
+            break;
+          case "exitFullscreen":
+            if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+            else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+            else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+            else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+            else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+            break;
+        }
+        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+        if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+          var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+          iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+        }
+      };
+      window.isPermitted = function(originUrl, whitelisted_domains) {
+        var url = document.createElement('a');
+        url.href = originUrl;
+        var hostname = url.hostname;
+        var result = false;
+        if( typeof hostname !== 'undefined' ) {
+          whitelisted_domains.forEach(function(element) {
+              if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                  result = true;
+              }
+          });
+          return result;
+        }
+      };
+      if (window.addEventListener) {
+        window.addEventListener("message", handleIFrameMessage, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onmessage", handleIFrameMessage);
+      }
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/flatpickr/dist/flatpickr.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.css">
+  </head>
+  <!-- Body-->
+<body>
+  <!-- Page loading spinner-->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+  <main class="page-wrapper">
+      <!-- Offcanvas mobile menu example -->
+      <header class="header navbar navbar-expand-lg navbar-dark navbar-shadow navbar-sticky"  style="background-color:blanchedalmond; opacity: 80%;" data-scroll-header data-fixed-element>
+        <div class="container px-0 px-xl-3">
+      <a class="navbar-brand flex-shrink-0 pe-lg-2 me-lg-4" href="index.html">
+        <img src="img/logo/RKT_Logo_2.png" width="83" alt="RadhaKrishnaTempleofDallas">
+      </a>
+      <button class="navbar-toggler me-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-collapse offcanvas-end" id="primaryMenu">
+        <div class="offcanvas-header navbar-shadow">
+          <h5 class="mt-1 mb-0">Menu</h5>
+          <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav" style=" font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  font-size: x-large; ">
+            <li class="nav-item active"><a class="nav-link" href="#Features" style="color: #262629">Features</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/holi/Tickets.html" style="color: #262629">Buy Tickets</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/holi/Tickets.html#Vendor" style="color: #262629">Be A Vendor</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/holi/Tickets.html#Souvenier" style="color: #262629">Souvenir Advt</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#Sponsors" style="color: #262629">Sponsors</a></li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.radhakrishnatemple.net/holi-volunteers" style="color: #262629">Volunteer</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/holi/FAQs.html" style="color: #262629">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- Page content-->
+<!-- Controls position: Dots outside + Arrows inside -->
+
+  <section id="BuyTicket" class=" jarallax position-relative pt-5 pt-lg-6" data-jarallax data-speed="0.25" style="background-color: rgb(56, 2, 32);">
+
+    <!-- Tabs-->
+    <div class="container pb-7">
+      <div class="row justify-content-center pb-7">
+        
+        <div class="accordion" id="accordionExample">
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1. What is the Holi Festival?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Holi is a popular Hindu festival, a festival of colors, which celebrates the divine love of Radha and Krishna.</div>
+            </div>
+          </div>
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1. Where to Park the cars?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Dallas Holi Fest has designated parking area. Please look out for signs on the same plot of land where the color play is. All other parking spaces across the roads are not event parking and towing will be enforced for violations.</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">2. How do I get to the venue?</button>
+            </h2>
+            <div class="accordion-collapse collapse text-light" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light ">The venue of the Dallas Holi Fest is at Exchange and Watters Rd, (NE Corner), near Radha Krishna Temple, Allen, TX 75013. To access the directions, visit https://www.radhakrishnatemple.net/holi/</div>
+            </div>
+          </div>
+        
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">3. What can I expect in this year’s Holi Festival?</button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">The Dallas Holi Fest has been organized by the Radha Krishna Temple, Allen, TX on Saturday, March 19th 2022.  
+                You can expect the ultimate Holi Dhamaka for the entire family with Remix King Harry Anand and Bollywood Singer Shalmali Kholgade performing LIVE, color play, dancing, delicious food and much more!
+                </div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">4. Where can I buy tickets to Holi 2022?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">For buying tickets, kindly visit the https://www.radhakrishnatemple.net/holi/</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">5. Is this event open for all?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">This event is family friendly and open for all.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">6. Is the event kid-friendly?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseSix" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">The event is kid friendly, there are plenty of activities available for all ages.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">7. Can I bring food and drinks from outside?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseSeven" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">No outside food and drinks are allowed.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">8. Are we allowed to bring in cameras?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseEight" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Yes! And tag us as #DallasHoliFest in your Insta or Facebook.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">9. What can I not bring inside the venue?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseNine" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Outside Colors and Food are not allowed.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingTen">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">10. Is the colored powder safe?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseTen" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Yes, we will be using organic safe colors.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="headingEleven">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">11. Can I bring my own colored powder?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseEleven" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">No, outside colors are not allowed.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwelve">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">12. Am I allowed to go on stage during the Holi Festival?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseTwelve" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">No, until someone particularly calls you.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThrtn">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThrtn" aria-expanded="false" aria-controls="collapseThrtn">13. What happens if it rains?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseThrtn" aria-labelledby="headingThrtn" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">We will be having the event.  But we will keep you posted for any unavoidable circumstances.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFortn">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFortn" aria-expanded="false" aria-controls="collapseFortn">14. Will there be a first aid tent at the Holi Festival?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseFortn" aria-labelledby="headingFortn" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">First aid box will be available at the event.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFftn">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFftn" aria-expanded="false" aria-controls="collapseFftn">15. What is a Premium Group Booth?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseFftn" aria-labelledby="headingFftn" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Private table seating in a booth to gather with your friends & family. Meet and greet with celebrities in your booth. Maximum 6 members in a booth.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSixtn">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixtn" aria-expanded="false" aria-controls="collapseSixtn">16. What is Deluxe Admission?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseSixtn" aria-labelledby="headingSixtn" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">With a Deluxe Admission ticket, you will be close to the stage and have access to a designated seated area.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSvntn">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSvntn" aria-expanded="false" aria-controls="collapseSvntn">17. Is Parking fee extra?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseSvntn" aria-labelledby="headingSvntn" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">Yes, there will be an extra fee of $10 for parking.</div>
+            </div>
+          </div>
+      
+          <!-- Item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEghtn">
+              <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEghtn" aria-expanded="false" aria-controls="collapseEghtn">18. How do we purchase colors or food at the event?
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" id="collapseEghtn" aria-labelledby="headingEghtn" data-bs-parent="#accordionExample">
+              <div class="accordion-body text-light">You can buy the coupons online in advance, or pay at the booth. Details here: https://radhakrishnatemple.net/holi</div>
+            </div>
+          </div>
+        </div>  
+        
+        
+
+
+
+      </div>
+    </div>
+  
+
+<div style="background-color: rgb(80, 3, 32);">
+        <!-- Subscribe CTA-->
+        <div id="disqus_comments_sec" class="container">
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '/holi'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://http-192-169-81-40-rkt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+        </div>
+          <!-- Subscribe CTA-->
+          <section class="position-relative pt-6 pb-5 py-sm-6">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-size-cover" style="background-image: url(img/demo/booking/bg-pattern02.png);"></div>
+            <div class="position-relative zindex-5 container pb-3 pt-sm-2">
+              <div class="mx-auto" style="max-width: 640px;">
+                <h2 class="text-light text-center pt-sm-2">Subscribe to our newsletter</h2>
+                <p class="text-light text-center mb-grid-gutter">Stay updated!.</p>
+                <form>
+                  <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-3">
+                      <div class="form-group">
+                        <input name="name" id="name" class="form-control" type="text" placeholder="Your name" required>
+                      </div>
+                    </div>
+      
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-3">
+                      <div class="form-group">
+                        <input name="email" id="email" class="form-control" type="email" placeholder="Your email" required>
+                      </div>
+                    </div>
+      
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-3">
+                      <div class="form-group">
+                        <input name="phone" id="phone" class="form-control" type="text" placeholder="Your phone">
+                      </div>
+                    </div>
+      
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-3">
+                      <div class="form-group">
+                        <input name="city" id="city" class="form-control" type="text" placeholder="City">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="form-group">
+                   <input style="display:none;" name="url" id="url" class="form-control" type="text" placeholder="URL">
+                   <button id="custom_subscribe_form" class="btn btn-success" type="button"><i class="ai-send fs-xl me-1"></i> SUBMIT <i id="submit_spinner"  style="display:none;" class="fa fa-spinner fa-spin"></i></button>
+                  </div>
+                  <div class="input-group mb-4">
+                  <!-- <button id="custom_subscribe_form" class="btn btn-success" type="button"><i class="ai-send fs-xl me-1"></i></button> -->
+                </div>
+                <div class="form-group custome_checkbox">
+                  <input data-whtsgrp-id="KWxeyJFnvURLKzrWfJwU2t" type="checkbox" id="edit-join-me-to-whatsapp-group" name="join_me_to_whatsapp_group" value="1" class="form-checkbox">
+                  <label for="edit-join-me-to-whatsapp-group">Join me to WhatsApp group</label>
+                </div>
+            <!-- <div class="js-form-item form-item js-form-type-checkbox form-item-join-me-to-whatsapp-group js-form-item-join-me-to-whatsapp-group">
+              <input data-drupal-selector="edit-join-me-to-whatsapp-group" type="checkbox" id="edit-join-me-to-whatsapp-group" name="join_me_to_whatsapp_group" value="1" class="form-checkbox">
+              <label for="edit-join-me-to-whatsapp-group" class="option"></label>
+             
+            </div> -->
+                </form>
+      
+      
+                <div style="display:none" id="success_div" class="alert alert-success fade show alert-dismissible" role="alert">
+                  <strong><i class="fa fa-check-circle" aria-hidden="true"></i></strong> Greetings and thank you for subscribing
+                   
+                </div>
+                <div style="display:none" id="failure_div" class="alert alert-danger fade show alert-dismissible" role="alert">
+                    <strong><i class="fa fa-warning" aria-hidden="true"></i></strong> Please fill out the required fields. 
+                     
+                </div>
+            <div style="display:none" id="already_exists_div" class="alert alert-danger fade show alert-dismissible" role="alert">
+                    <strong><i class="fa fa-warning" aria-hidden="true"></i></strong> The email address you entered already exists! 
+                     
+                </div>
+      
+              <div class="text-center pt-3">
+                <div class="fs-sm fw-medium text-light pb-1 mb-2">We are social</div><a class="btn-social bs-outline bs-facebook bs-light bs-lg me-2 mb-2" href="https://www.facebook.com/RadhaKrishnaTempleofDallas"><i class="ai-facebook"></i></a><a class="btn-social bs-outline bs-twitter bs-light bs-lg me-2 mb-2" href="https://twitter.com/RKT_Dallas"><i class="ai-twitter"></i></a><a class="btn-social bs-outline bs-instagram bs-light bs-lg me-2 mb-2" href="https://www.instagram.com/rkt_dallas/"><i class="ai-instagram"></i></a><a class="btn-social bs-outline bs-google bs-light bs-lg me-2 mb-2" href="https://www.youtube.com/c/JKYogMusic"><i class="ai-youtube"></i></a><a class="btn-social bs-outline bs-google bs-light bs-lg me-2 mb-2" href="https://chat.whatsapp.com/DOGo1wolu5oHO3uZbigGu5"><i class="ai-message-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  </main>
+    <footer class="site-footer bg-dark pt-5 pb-4">
+      <div class="container d-md-flex justify-content-between align-items-center text-center">
+        <ul class="list-inline fs-sm mb-3 order-md-2">
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Support</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Contacts</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!--podium-->
+    <script defer src="https://connect.podium.com/widget.js#API_TOKEN=866616a2-f39f-4a82-9db4-04fd7745413b" id="podium-widget" data-api-token="866616a2-f39f-4a82-9db4-04fd7745413b"></script>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll data-fixed-element><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="vendor/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="vendor/flatpickr/dist/plugins/rangePlugin.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
